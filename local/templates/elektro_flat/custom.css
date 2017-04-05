@@ -1,0 +1,201 @@
+/***CUSTOM CSS RULES FOR YOUR SITE***/
+/*body{
+	background:url(./images/background.png);
+}
+.body{
+	background:none;
+}
+header{
+	background:none;
+}
+.header_1 .logo a span,
+.header_4 .telephone p span,
+.header_4 .telephone p,
+.header_3 .schedule p,
+.header_4 .telephone a.callback_anch .text,
+.header_4 .telephone a.callback_anch i,
+.top-menu ul.store-horizontal li a,
+.footer_menu ul li a,
+.footer_soc .h3,
+.footer_pay .h3,
+.footer_left .copyright,
+.footer_center .footer-links a,
+.footer_right .footer-design a{
+	color:#fff;
+}
+.header_4 .telephone a.callback_anch{
+	border-color:#fff;
+}
+.foot_panel,
+.compare_line a,
+.delay_line a,
+.kabinet a.login_anch,
+.kabinet a.personal,
+.kabinet a.registe{
+	border-color:#17630e;
+}
+.kabinet a.login_anch i,
+.kabinet a.personal i,
+.kabinet a.register i,
+.compare_line a i,
+.delay_line a i,
+.foot_panel_2 a.cart i{
+	color:#17630e;
+}
+.compare_line a:hover,
+.delay_line a:hover,
+.kabinet a:hover.login_anch,
+.kabinet a:hover.personal,
+.kabinet a:hover.registe{
+	background:#17630e;
+}
+.btn_buy.oformit.dsbl,
+.btn_buy.oformit.dsbl:hover{
+	background:#17630e;
+	color:#209113;
+}
+.header_1 .logo a img{
+	max-width:320px;
+	max-height:110px;
+	display:table-cell;
+	float:left;
+}
+.header_1 .logo{
+	margin-top:7px;
+}
+.header_1 .logo a span{
+	width:230px;
+	display:table-cell;
+	height:123px;
+	vertical-align:middle;
+}
+
+.top-menu{
+	height:48px;
+	background:#209113;
+}
+
+.top-menu ul.store-horizontal li{
+	margin:0;
+}
+
+.top-menu ul.store-horizontal li a{
+	height:48px;
+	line-height:48px;
+	font-size:12px;
+	font-weight:700;
+	text-decoration:underline;
+	border-right:1px solid #419f38;
+}
+
+.top-menu ul.store-horizontal li a:first-child{
+	border-left:1px solid #419f38;
+}
+
+.top-menu ul.store-horizontal li:hover a,
+.top-menu ul.store-horizontal li a.root-item-selected{
+	text-decoration:none;
+}*/
+
+.top-menu{
+	height:48px;
+	background: #209113;
+}
+
+.top-menu ul.store-horizontal {
+    height: auto;
+}
+
+.top-menu ul.store-horizontal li{
+	margin:0;
+}
+
+.top-menu ul.store-horizontal li a{
+	height:48px;
+	line-height:48px;
+	font-size:12px;
+	font-weight:700;
+	text-decoration:underline;
+	color: #fff;
+}
+
+.top-menu ul.store-horizontal > li.active > a {
+    text-decoration: none;
+}
+
+.top-menu ul.store-horizontal li:hover a,
+.top-menu ul.store-horizontal li a.root-item-selected{
+	text-decoration:none;
+}
+
+.top-menu ul.store-horizontal ul.dropdown-menu li a {
+    height: auto;
+    line-height: 1.3;
+    font-size: 11px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.top-menu ul.store-horizontal ul.dropdown-menu li a:hover {
+    text-decoration: none;
+}
+
+header, footer {
+	background: transparent;
+}
+
+.center.outer {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.shadow__cus {
+    -webkit-box-shadow: 0px 0px 51px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 51px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 51px rgba(0, 0, 0, 0.15);
+}
+
+.header_4 .telephone p {
+	color: #fff;
+}
+
+.header_4 .telephone p span:not(.icon) {
+	color: #fff;
+}
+
+.header_4 a.callback_anch {
+	color: #fff;
+}
+
+.header_4 a.callback_anch i {
+   color: #fff;
+}
+
+.footer_menu ul li a {
+    color: #fff;
+}
+
+.footer_menu ul li a:hover {
+    color: #fff;
+}
+
+.footer_soc .h3, .footer_pay .h3 {
+    color: #fff;
+}
+
+.footer-bottom__copyright {
+    color: #fff;
+}
+
+.footer-bottom__links a:link, .footer-bottom__links a:visited {
+    color: #fff;
+}
+
+.footer-bottom__counter span {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.footer-bottom__design a:hover {
+    color: #fff;
+}

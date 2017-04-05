@@ -1,0 +1,609 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+use Bitrix\Main\Localization\Loc;
+use Bitrix\Main\Page\Asset;
+Loc::loadMessages(__FILE__);?>
+<!DOCTYPE html>
+<html lang="<?=LANGUAGE_ID?>">
+<head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBNZW4');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter4872061 = new Ya.Metrika({
+                    id:4872061,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true,
+                    ecommerce:"dataLayer"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/4872061" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+	<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/favicon.ico" />	
+	<link rel="apple-touch-icon" sizes="57x57" href="<?=SITE_TEMPLATE_PATH?>/images/apple-touch-icon-114.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="<?=SITE_TEMPLATE_PATH?>/images/apple-touch-icon-114.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="<?=SITE_TEMPLATE_PATH?>/images/apple-touch-icon-144.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="<?=SITE_TEMPLATE_PATH?>/images/apple-touch-icon-144.png" />
+	<?Asset::getInstance()->addString("<meta name='viewport' content='width=device-width, initial-scale=1.0' />");?>
+	<title><?$APPLICATION->ShowTitle()?></title>
+	<?Asset::getInstance()->addCss("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");	
+	Asset::getInstance()->addCss("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic-ext");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/colors.css");	
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/js/anythingslider/slider.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/js/custom-forms/custom-forms.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/js/fancybox/jquery.fancybox-1.3.1.css");	
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/js/spectrum/spectrum.css");	
+	CJSCore::Init(array("jquery", "popup"));	
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/jquery.cookie.js");	
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/moremenu.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/jquery.inputmask.bundle.min.js");		
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/anythingslider/jquery.easing.1.2.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/anythingslider/jquery.anythingslider.min.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/custom-forms/jquery.custom-forms.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/fancybox/jquery.fancybox-1.3.1.pack.js");	
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/spectrum/spectrum.js");	
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/countUp.min.js");	
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/countdown/jquery.plugin.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/countdown/jquery.countdown.js");	
+	Asset::getInstance()->addString("
+		<script type='text/javascript'>
+			$(function() {
+				$.countdown.regionalOptions['ru'] = {
+					labels: ['".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS_YEAR")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS_MONTH")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS_WEEK")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS_DAY")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS_HOUR")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS_MIN")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS_SEC")."'],
+					labels1: ['".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS1_YEAR")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS1_MONTH")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS1_WEEK")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS1_DAY")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS1_HOUR")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS_MIN")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS_SEC")."'],
+					labels2: ['".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS2_YEAR")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS2_MONTH")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS2_WEEK")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS2_DAY")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS2_HOUR")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS_MIN")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_LABELS_SEC")."'],
+					compactLabels: ['".Loc::getMessage("COUNTDOWN_REGIONAL_COMPACT_LABELS_YEAR")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_COMPACT_LABELS_MONTH")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_COMPACT_LABELS_WEEK")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_COMPACT_LABELS_DAY")."'],
+					compactLabels1: ['".Loc::getMessage("COUNTDOWN_REGIONAL_COMPACT_LABELS1_YEAR")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_COMPACT_LABELS_MONTH")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_COMPACT_LABELS_WEEK")."', '".Loc::getMessage("COUNTDOWN_REGIONAL_COMPACT_LABELS_DAY")."'],
+					whichLabels: function(amount) {
+						var units = amount % 10;
+						var tens = Math.floor((amount % 100) / 10);
+						return (amount == 1 ? 1 : (units >= 2 && units <= 4 && tens != 1 ? 2 : (units == 1 && tens != 1 ? 1 : 0)));
+					},
+					digits: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+					timeSeparator: ':',
+					isRTL: false
+				};
+				$.countdown.setDefaults($.countdown.regionalOptions['ru']);
+			});
+		</script>
+	");	
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/main.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/script.js");
+	$APPLICATION->ShowHead();?>	
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBNZW4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<?
+$city = CVilkaSEO::get_domain();
+
+if ($city["REGION"] == "default") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин (oblikdom.ru)";} 
+elseif ($city["REGION"] == "barnaul") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Барнаул";}
+elseif ($city["REGION"] == "berezniki") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Березники";}
+elseif ($city["REGION"] == "volgograd") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Волгоград";}
+elseif ($city["REGION"] == "voronezh") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Воронеж";}
+elseif ($city["REGION"] == "dzerzhinsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Дзержинск";}
+elseif ($city["REGION"] == "izhevsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Ижевск";}
+elseif ($city["REGION"] == "irkutsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Иркутск";}
+elseif ($city["REGION"] == "io") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Йошкар-Ола";}
+elseif ($city["REGION"] == "kazan") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Казань";}
+elseif ($city["REGION"] == "kamensk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Каменск-Уральский";}
+elseif ($city["REGION"] == "kemerovo") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Кемерово";}
+elseif ($city["REGION"] == "kirov") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Киров";}
+elseif ($city["REGION"] == "krasnoyarsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Красноярск";}
+elseif ($city["REGION"] == "kurgan") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Курган";}
+elseif ($city["REGION"] == "magnitogorsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Магнитогорск";}
+elseif ($city["REGION"] == "miass") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Миасс";}
+elseif ($city["REGION"] == "nch") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Набережные Челны";}
+elseif ($city["REGION"] == "neftekamsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Нефтекамск";}
+elseif ($city["REGION"] == "nizhnevartovsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Нижневартовск";}
+elseif ($city["REGION"] == "nzhkamsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Нижнекамск";}
+elseif ($city["REGION"] == "nnov") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Нижний Новгород";}
+elseif ($city["REGION"] == "tagil") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Нижний Тагил";}
+elseif ($city["REGION"] == "novokuzneck") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Новокузнецк";}
+elseif ($city["REGION"] == "nsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Новосибирск";}
+elseif ($city["REGION"] == "noyabrsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Ноябрьск";}
+elseif ($city["REGION"] == "omsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Омск";}
+elseif ($city["REGION"] == "orenburg") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Оренбург";}
+elseif ($city["REGION"] == "orsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Орск";}
+elseif ($city["REGION"] == "perm") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Пермь";}
+elseif ($city["REGION"] == "rostov") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Ростов-на-Дону";}
+elseif ($city["REGION"] == "salavat") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Салават";}
+elseif ($city["REGION"] == "sterlitamak") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Стерлитамак";}
+elseif ($city["REGION"] == "surgut") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Сургут";}
+elseif ($city["REGION"] == "syktyvkar") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Сыктывкар";}
+elseif ($city["REGION"] == "tolyatti") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Тольятти";}
+elseif ($city["REGION"] == "tomsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Томск";}
+elseif ($city["REGION"] == "tmn") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Тюмень";}
+elseif ($city["REGION"] == "ulyanovsk") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Ульяновск";}
+elseif ($city["REGION"] == "ufa") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Уфа";}
+elseif ($city["REGION"] == "cheb") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Чебоксары";}
+elseif ($city["REGION"] == "chel") {$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин - Челябинск";}
+else
+		{$_SESSION["VREGIONS_REGION"]["PRICE"] = "Интернет-магазин (oblikdom.ru)";}
+
+if ($_SERVER["REMOTE_ADDR"] == "192.168.1.20"){
+//die($_SESSION["VREGIONS_REGION"]["PRICE"]);
+};
+
+
+
+?>
+
+	<?global $arSetting;?>
+	<?$arSetting = $APPLICATION->IncludeComponent("altop:settings", "", array(), false, array("HIDE_ICONS" => "Y"));?>
+	<div class="bx-panel<?=($arSetting['CART_LOCATION']['VALUE'] == 'TOP') ? ' clvt' : ''?>">
+		<?$APPLICATION->ShowPanel();?>
+	</div>
+	<div class="bx-include-empty">
+		<?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => ""), false);?>
+	</div>
+	<div class="body<?=($arSetting['CATALOG_LOCATION']['VALUE'] == 'HEADER') ? ' clvh' : ''?><?=($arSetting['CART_LOCATION']['VALUE'] == 'TOP') ? ' clvt' : ''?><?=($arSetting['CART_LOCATION']['VALUE'] == 'RIGHT') ? ' clvr' : ''?><?=($arSetting['CART_LOCATION']['VALUE'] == 'LEFT') ? ' clvl' : ''?>"<?=($arSetting["SITE_BACKGROUND"]["VALUE"] == "Y" && $arSetting["SITE_BACKGROUND_COLOR"]["VALUE"] ? " style='background-color:".$arSetting["SITE_BACKGROUND_COLOR"]["VALUE"].";'" : "");?>>
+		<div class="page-wrapper<?=($arSetting['SITE_BACKGROUND_REPEAT_X']['VALUE'] == 'Y' ? ' bg-repeat-x' : '').($arSetting['SITE_BACKGROUND_REPEAT_Y']['VALUE'] == 'Y' ? ' bg-repeat-y' : '').($arSetting['SITE_BACKGROUND_FIXED']['VALUE'] == 'Y' ? ' bg-fixed' : '');?>"<?=$APPLICATION->ShowProperty("backgroundImage")?>>
+			<?if($arSetting["SITE_BACKGROUND"]["VALUE"] == "Y"):?>
+				<div class="center outer">
+			<?endif;
+			if($arSetting["CATALOG_LOCATION"]["VALUE"] == "HEADER"):?>
+				<div class="top-menu">
+					<div class="center<?=($arSetting['SITE_BACKGROUND']['VALUE'] == 'Y' ? ' inner' : '');?>">
+						<?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/top_menu.php"), false, array("HIDE_ICONS" => "Y"));?>
+					</div>
+				</div>
+			<?endif;?>			
+			<header>
+				<div class="center<?=($arSetting['SITE_BACKGROUND']['VALUE'] == 'Y' ? ' inner' : '');?>">
+					<div class="header_1">
+						<div class="logo">
+							<?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/company_logo.php"), false);?>
+						</div>
+					</div>
+					<div class="header_2">
+						<?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/header_search.php"), false, array("HIDE_ICONS" => "Y"));?>
+					</div>
+					<div class="header_3">
+						<div class="schedule">
+							<?$APPLICATION->IncludeComponent("bitrix:main.include", "", array(
+	"AREA_FILE_SHOW" => "file",
+		"PATH" => SITE_DIR."include/schedule.php"
+	),
+	false,
+	array(
+	"ACTIVE_COMPONENT" => "N"
+	)
+);?>
+<?$APPLICATION->IncludeComponent(
+	"vilka:cities", 
+	"old_fancy", 
+	array(
+		"COMPONENT_TEMPLATE" => "old_fancy",
+		"USE_JQ" => "N",
+		"USE_FB" => "Y",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO"
+	),
+	false
+);?>
+						</div>
+					</div>					
+					<div class="header_4">
+						<div class="telephone">
+							<?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/telephone.php"), false);?>
+							
+							<a id="callbackAnch" class="btn_buy apuo callback_anch" href="javascript:void(0)"><span class="cont"><i class="fa fa-phone"></i><span class="text"><?=Loc::getMessage("ALTOP_CALL_BACK")?></span></span></a>
+							<?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/form_callback.php"), false, array("HIDE_ICONS" => "Y"));?>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="shadow__cus">
+			<?if($arSetting["CATALOG_LOCATION"]["VALUE"] == "LEFT"):?>
+				<div class="top-menu">
+					<div class="center<?=($arSetting['SITE_BACKGROUND']['VALUE'] == 'Y' ? ' inner' : '');?>">
+						<?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/top_menu.php"), false, array("HIDE_ICONS" => "Y"));?>
+					</div>
+				</div>
+			<?elseif($arSetting["CATALOG_LOCATION"]["VALUE"] == "HEADER"):?>
+				<div class="top-catalog">
+					<div class="center<?=($arSetting['SITE_BACKGROUND']['VALUE'] == 'Y' ? ' inner' : '');?>">
+						<?$APPLICATION->IncludeComponent("bitrix:menu", $arSetting["CATALOG_VIEW"]["VALUE"] == "FOUR_LEVELS" ? "tree" : "sections",
+							array(
+								"ROOT_MENU_TYPE" => "left",
+								"MENU_CACHE_TYPE" => "A",
+								"MENU_CACHE_TIME" => "36000000",
+								"MENU_CACHE_USE_GROUPS" => "Y",
+								"MENU_CACHE_GET_VARS" => array(),
+								"MAX_LEVEL" => "4",
+								"CHILD_MENU_TYPE" => "left",
+								"USE_EXT" => "Y",
+								"DELAY" => "N",
+								"ALLOW_MULTI_SELECT" => "N"
+							),
+							false
+						);?>
+					</div>
+				</div>
+			<?endif;?>
+			<div class="top_panel">
+				<div class="center<?=($arSetting['SITE_BACKGROUND']['VALUE'] == 'Y' ? ' inner' : '');?>">
+					<div class="panel_1">
+						<?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/sections.php"), false, array("HIDE_ICONS" => "Y"));?>
+					</div>
+					<div class="panel_2">
+						<?$APPLICATION->IncludeComponent("bitrix:menu", "panel", 
+							array(
+								"ROOT_MENU_TYPE" => "top",
+								"MENU_CACHE_TYPE" => "A",
+								"MENU_CACHE_TIME" => "36000000",
+								"MENU_CACHE_USE_GROUPS" => "Y",
+								"MENU_CACHE_GET_VARS" => array(),
+								"MAX_LEVEL" => "3",
+								"CHILD_MENU_TYPE" => "topchild",
+								"USE_EXT" => "N",
+								"ALLOW_MULTI_SELECT" => "N"
+							),
+							false
+						);?>
+					</div>
+					<div class="panel_3">
+						<ul class="contacts-vertical">
+							<li>
+								<a class="showcontacts" href="javascript:void(0)"><i class="fa fa-phone"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="panel_4">
+						<ul class="search-vertical">
+							<li>
+								<a class="showsearch" href="javascript:void(0)"><i class="fa fa-search"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content-wrapper">
+				<div class="center<?=($arSetting['SITE_BACKGROUND']['VALUE'] == 'Y' ? ' inner' : '');?>">
+					<div class="content">
+						<div class="left-column">
+							<?if($APPLICATION->GetDirProperty("PERSONAL_SECTION")):?>
+								<div class="h3"><?=Loc::getMessage("PERSONAL_HEADER");?></div>
+								<?$APPLICATION->IncludeComponent("altop:user", ".default", array(), false);?>
+								<?$APPLICATION->IncludeComponent("bitrix:menu", "tree",
+									array(
+										"ROOT_MENU_TYPE" => "personal",
+										"MENU_CACHE_TYPE" => "A",
+										"MENU_CACHE_TIME" => "36000000",
+										"MENU_CACHE_USE_GROUPS" => "Y",
+										"MENU_CACHE_GET_VARS" => array(),
+										"MAX_LEVEL" => "1",
+										"CHILD_MENU_TYPE" => "personal",
+										"USE_EXT" => "Y",
+										"DELAY" => "N",
+										"ALLOW_MULTI_SELECT" => "N"
+									),
+									false
+								);?>
+							<?else:
+								if($arSetting["CATALOG_LOCATION"]["VALUE"] == "LEFT"):?>
+									<div class="h3"><?=Loc::getMessage("BASE_HEADER");?></div>
+									<?$APPLICATION->IncludeComponent("bitrix:menu", $arSetting["CATALOG_VIEW"]["VALUE"] == "FOUR_LEVELS" ? "tree" : "sections",
+										array(
+											"ROOT_MENU_TYPE" => "left",
+											"MENU_CACHE_TYPE" => "A",
+											"MENU_CACHE_TIME" => "36000000",
+											"MENU_CACHE_USE_GROUPS" => "Y",
+											"MENU_CACHE_GET_VARS" => array(),
+											"MAX_LEVEL" => "4",
+											"CHILD_MENU_TYPE" => "left",
+											"USE_EXT" => "Y",
+											"DELAY" => "N",
+											"ALLOW_MULTI_SELECT" => "N"
+										),
+										false
+									);?>									
+								<?endif;
+							endif;
+							if($arSetting["SMART_FILTER_LOCATION"]["VALUE"] == "VERTICAL"):
+								$APPLICATION->ShowViewContent("filter_vertical");
+							endif;
+							if($arSetting["CATALOG_LOCATION"]["VALUE"] == "HEADER"):?>
+								<?$APPLICATION->IncludeComponent("bitrix:main.include", "", 
+									array(
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => SITE_DIR."include/banners_left.php",
+										"AREA_FILE_RECURSIVE" => "N",
+										"EDIT_MODE" => "html",
+									),
+									false,
+									array("HIDE_ICONS" => "Y")
+								);?>													
+								<?if($APPLICATION->GetCurPage(true)!= SITE_DIR."index.php") {?>
+									<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+										array(
+											"AREA_FILE_SHOW" => "file",
+											"PATH" => SITE_DIR."include/slider_left.php",
+											"AREA_FILE_RECURSIVE" => "N",
+											"EDIT_MODE" => "html",
+										),
+										false,
+										array("HIDE_ICONS" => "Y")
+									);?>
+								<?}?>
+							<?endif;?>
+							<ul class="new_leader_disc">
+								<li>
+									<a class="new" href="<?=SITE_DIR?>catalog/newproduct/">
+										<span class="icon"><?=Loc::getMessage("CR_TITLE_ICON_NEWPRODUCT")?></span>
+										<span class="text"><?=Loc::getMessage("CR_TITLE_NEWPRODUCT")?></span>
+									</a>
+								</li>
+								<li>
+									<a class="hit" href="<?=SITE_DIR?>catalog/saleleader/">
+										<span class="icon"><?=Loc::getMessage("CR_TITLE_ICON_SALELEADER")?></span>
+										<span class="text"><?=Loc::getMessage("CR_TITLE_SALELEADER")?></span>
+									</a>
+								</li>
+								<li>
+									<a class="discount" href="<?=SITE_DIR?>catalog/discount/">
+										<span class="icon"><?=Loc::getMessage("CR_TITLE_ICON_DISCOUNT")?></span>
+										<span class="text"><?=Loc::getMessage("CR_TITLE_DISCOUNT")?></span>
+									</a>
+								</li>
+							</ul>							
+							<?if($arSetting["CATALOG_LOCATION"]["VALUE"] == "LEFT"):?>
+								<?$APPLICATION->IncludeComponent("bitrix:main.include", "", 
+									array(
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => SITE_DIR."include/banners_left.php",
+										"AREA_FILE_RECURSIVE" => "N",
+										"EDIT_MODE" => "html",
+									),
+									false,
+									array("HIDE_ICONS" => "Y")
+								);?>													
+								<?if($APPLICATION->GetCurPage(true)!= SITE_DIR."index.php") {?>
+									<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+										array(
+											"AREA_FILE_SHOW" => "file",
+											"PATH" => SITE_DIR."include/slider_left.php",
+											"AREA_FILE_RECURSIVE" => "N",
+											"EDIT_MODE" => "html",
+										),
+										false,
+										array("HIDE_ICONS" => "Y")
+									);?>
+								<?}?>
+							<?endif;?>
+							<div class="vendors">
+								<div class="h3"><?=Loc::getMessage("MANUFACTURERS");?></div>
+								<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+									array(
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => SITE_DIR."include/vendors_left.php",
+										"AREA_FILE_RECURSIVE" => "N",
+										"EDIT_MODE" => "html",
+									),
+									false,
+									array("HIDE_ICONS" => "Y")
+								);?>
+							</div>
+							<div class="subscribe">
+								<div class="h3"><?=Loc::getMessage("SUBSCRIBE");?></div>
+								<p><?=Loc::getMessage("SUBSCRIBE_TEXT");?></p>
+								<?$APPLICATION->IncludeComponent("bitrix:subscribe.form", "left", 
+									array(
+										"USE_PERSONALIZATION" => "Y",	
+										"PAGE" => SITE_DIR."personal/subscribe/",
+										"SHOW_HIDDEN" => "N",
+										"CACHE_TYPE" => "A",
+										"CACHE_TIME" => "36000000",
+										"CACHE_NOTES" => ""
+									),
+									false
+								);?>
+							</div>
+							<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+								array(
+									"AREA_FILE_SHOW" => "file",
+									"PATH" => SITE_DIR."include/news_left.php",
+									"AREA_FILE_RECURSIVE" => "N",
+									"EDIT_MODE" => "html",
+								),
+								false,
+								array("HIDE_ICONS" => "Y")
+							);?>
+							<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+								array(
+									"AREA_FILE_SHOW" => "file",
+									"PATH" => SITE_DIR."include/reviews_left.php",
+									"AREA_FILE_RECURSIVE" => "N",
+									"EDIT_MODE" => "html",
+								),
+								false,
+								array("HIDE_ICONS" => "Y")
+							);?>
+						</div>
+						<div class="workarea">
+							<?if($APPLICATION->GetCurPage(true)== SITE_DIR."index.php"):
+								if(in_array("SLIDER", $arSetting["HOME_PAGE"]["VALUE"])):?>
+									<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+										array(
+											"AREA_FILE_SHOW" => "file",
+											"PATH" => SITE_DIR."include/slider.php",
+											"AREA_FILE_RECURSIVE" => "N",
+											"EDIT_MODE" => "html",
+										),
+										false,
+										array("HIDE_ICONS" => "Y")
+									);?>
+								<?endif;
+								if(in_array("ADVANTAGES", $arSetting["HOME_PAGE"]["VALUE"])):
+									global $arAdvFilter;
+									$arAdvFilter = array(
+										"!PROPERTY_SHOW_HOME" => false
+									);?>
+									<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+										array(
+											"AREA_FILE_SHOW" => "file",
+											"PATH" => SITE_DIR."include/advantages.php",
+											"AREA_FILE_RECURSIVE" => "N",
+											"EDIT_MODE" => "html",
+										),
+										false,
+										array("HIDE_ICONS" => "Y")
+									);?>
+								<?endif;
+								if(in_array("PROMOTIONS", $arSetting["HOME_PAGE"]["VALUE"])):?>
+									<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+										array(
+											"AREA_FILE_SHOW" => "file",
+											"PATH" => SITE_DIR."include/promotions.php",
+											"AREA_FILE_RECURSIVE" => "N",
+											"EDIT_MODE" => "html",
+										),
+										false,
+										array("HIDE_ICONS" => "Y")
+									);?>
+								<?endif;
+								if(in_array("BANNERS", $arSetting["HOME_PAGE"]["VALUE"])):?>
+									<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+										array(
+											"AREA_FILE_SHOW" => "file",
+											"PATH" => SITE_DIR."include/banners_main.php",
+											"AREA_FILE_RECURSIVE" => "N",
+											"EDIT_MODE" => "html",
+										),
+										false,
+										array("HIDE_ICONS" => "Y")
+									);?>
+								<?endif;								
+								if(in_array("TABS", $arSetting["HOME_PAGE"]["VALUE"])):?>
+									<div class="tabs-wrap">
+										<ul class="tabs">
+											<?if(in_array("RECOMMEND", $arSetting["HOME_PAGE"]["VALUE"])):?>
+												<li class="tabs__tab recommend">
+													<a href="javascript:void(0)"><span><?=Loc::getMessage("CR_TITLE_RECOMMEND")?></span></a>
+												</li>
+											<?endif;?>
+											<li class="tabs__tab new">
+												<a href="javascript:void(0)"><span><?=Loc::getMessage("CR_TITLE_NEWPRODUCT")?></span></a>
+											</li>
+											<li class="tabs__tab hit">
+												<a href="javascript:void(0)"><span><?=Loc::getMessage("CR_TITLE_SALELEADER")?></span></a>
+											</li>
+											<li class="tabs__tab discount">
+												<a href="javascript:void(0)"><span><?=Loc::getMessage("CR_TITLE_DISCOUNT")?></span></a>
+											</li>
+										</ul>
+										<?if(in_array("RECOMMEND", $arSetting["HOME_PAGE"]["VALUE"])):?>
+											<div class="tabs__box recommend">
+												<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+													array(
+														"AREA_FILE_SHOW" => "file",
+														"PATH" => SITE_DIR."include/recommend.php",
+														"AREA_FILE_RECURSIVE" => "N",
+														"EDIT_MODE" => "html",
+													),
+													false,
+													array("HIDE_ICONS" => "Y")
+												);?>
+											</div>
+										<?endif;?>
+										<div class="tabs__box new">
+											<div class="catalog-top">
+												<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+													array(
+														"AREA_FILE_SHOW" => "file",
+														"PATH" => SITE_DIR."include/newproduct.php",
+														"AREA_FILE_RECURSIVE" => "N",
+														"EDIT_MODE" => "html",
+													),
+													false,
+													array("HIDE_ICONS" => "Y")
+												);?>
+												<a class="all" href="<?=SITE_DIR?>catalog/newproduct/"><?=Loc::getMessage("CR_TITLE_ALL_NEWPRODUCT");?></a>
+											</div>
+										</div>
+										<div class="tabs__box hit">
+											<div class="catalog-top">
+												<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+													array(
+														"AREA_FILE_SHOW" => "file",
+														"PATH" => SITE_DIR."include/saleleader.php",
+														"AREA_FILE_RECURSIVE" => "N",
+														"EDIT_MODE" => "html",
+													),
+													false,
+													array("HIDE_ICONS" => "Y")
+												);?>
+												<a class="all" href="<?=SITE_DIR?>catalog/saleleader/"><?=Loc::getMessage("CR_TITLE_ALL_SALELEADER");?></a>
+											</div>
+										</div>
+										<div class="tabs__box discount">
+											<div class="catalog-top">
+												<?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+													array(
+														"AREA_FILE_SHOW" => "file",
+														"PATH" => SITE_DIR."include/discount.php",
+														"AREA_FILE_RECURSIVE" => "N",
+														"EDIT_MODE" => "html",
+													),
+													false,
+													array("HIDE_ICONS" => "Y")
+												);?>
+												<a class="all" href="<?=SITE_DIR?>catalog/discount/"><?=Loc::getMessage("CR_TITLE_ALL_DISCOUNT");?></a>
+											</div>
+										</div>
+									</div>
+								<?endif;
+							endif;?>
+							<div class="body_text" style="<?=($APPLICATION->GetCurPage(true) == SITE_DIR.'index.php') ? 'padding:0px 15px;' : 'padding:0px;';?>">
+								<?if($APPLICATION->GetCurPage(true)!= SITE_DIR."index.php"):?>
+									<div class="breadcrumb-search">
+										<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default", 
+											array(
+												"START_FROM" => "0",
+												"PATH" => "",
+												"SITE_ID" => "-"
+											),
+											false,
+											array("HIDE_ICONS" => "Y")
+										);?>
+										<div class="podelitsya">											
+											<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
+											<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,gplus" data-yashareTheme="counter"></div>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<h1><?=$APPLICATION->ShowTitle(false);?></h1>
+								<?endif;?>		
